@@ -1,0 +1,55 @@
+.tooltip {
+    transition: opacity 0.5s;
+    background-color: #ffe4c4ee;
+    border: 2px #191970ee solid;
+    border-radius: 5px;
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    min-height: 50px;
+    max-height: 45vh;
+    min-width: 100px;
+    max-width: 300px;
+    scrollbar-width: thin;
+    scrollbar-color: grey #ffe4c4ee;
+    padding: 0.3em;
+    z-index: 1;
+}
+.tooltip::-webkit-scrollbar {
+    width: 7px;
+}
+.tooltip::-webkit-scrollbar-track {
+    background-color: #ffe4c4ee;
+}
+.tooltip::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: grey;
+}
+.tooltip li {
+    margin: 0 0 0.5em;
+} 
+.tooltip > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-position: inside;
+}
+.tooltip li a {
+    color: royalblue;
+    text-decoration: none;
+}
+.tooltip li a:hover {
+    text-decoration: underline;
+}
+
+.tooltip.hide {
+    pointer-events: none;
+    opacity: 0;
+}
+.tooltip.hide:hover {
+    pointer-events: auto;
+    opacity: 1;
+}
+.tooltip::not(.hide) {
+    opacity: 1;
+}

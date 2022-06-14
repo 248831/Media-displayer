@@ -1,0 +1,34 @@
+canvas {
+    height: 100%;
+    width: 100%;
+}
+foreignObject {
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+.node {
+    border: 1px black solid;
+    transition: visibility 0.3s, opacity 0.5s;
+    justify-content: center;
+    font: bold 14px Roboto;
+    display: inline-flex;
+    border-radius: 100%;
+    align-items: center;
+    position: absolute;
+    overflow: hidden;
+    visibility: visible;
+    z-index: 1;
+}
+.node::before {
+    padding-bottom: 100%;
+    content: '';
+}
+.node div {
+    text-align: center;
+    width: min-content;
+    margin: 0 1.5em;
+}
+.node.hide {
+    opacity: 0;
+    visibility: hidden;
+}

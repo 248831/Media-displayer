@@ -1,0 +1,11 @@
+certifi
+charset-normalizer
+idna
+numpy
+patool
+PyYAML
+requests
+setuptools
+tqdm
+urllib3
+wheel
